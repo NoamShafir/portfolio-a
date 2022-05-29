@@ -3,21 +3,19 @@ import Home from './sections/Home';
 import ProjectModal from './components/ProjectModal';
 
 function App() {
-  const [expandProject, setExpandProject] = useState(false);
+  const [showProject, setShowProject] = useState(false);
 
   const openProject = () => {
-    setExpandProject(true);
+    setShowProject(true);
     document.body.style.overflow = 'hidden';
   }
-  const closeProject = () => {
-    setExpandProject(false);
-    document.body.style.overflow = 'auto';
-  };
+  const closeProject = () => setShowProject(false);
+  const endCloseProject = () => document.body.style.overflow = 'auto';
   
   return (
     <div>
       <Home />
-      <ProjectModal show={expandProject} close={closeProject} />
+      <ProjectModal show={showProject} close={closeProject} endClose={endCloseProject} />
     </div>
   );
 }
