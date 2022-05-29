@@ -1,0 +1,21 @@
+.sun-container {
+  width: 700px;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.sun-container .magnet {
+  transition: transform 0.25s ease-out;
+}
+
+.sun-container .float {
+  transform: translateY(-10px);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(10px); }
+}
