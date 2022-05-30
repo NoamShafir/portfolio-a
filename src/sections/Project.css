@@ -2,28 +2,26 @@
     height: 80vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
-    padding: 0 80px;
+    padding: 40px 80px;
+    color: white;
 }
 
-.project.dark {
-    background-color: rgb(35, 35, 35);
-    color: white;
+.project.left {
+    background-color: rgb(45, 45, 45);
     flex-direction: row;
 }
 
-.project.bright {
-    background-color: lightgray;
-    color: black;
+.project.right {
+    background-color: rgb(40, 40, 40);
     flex-direction: row-reverse;
-    justify-content: space-between;
+    text-align: right;
 }
 
 .project .image {
     height: 100%;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 }
 
-.project.dark .info {
-    padding-left: 50px;
+.project .info {
+    padding: 50px;
 }

@@ -1,9 +1,9 @@
 import './Button.css';
 
-const Button = ({ large, dark, text, onClick }) => {
+const Button = ({ fill, text, onClick }) => {
   return (
-    <button className={`button ${dark ? 'dark' : 'bright'}`} onClick={onClick}>
-      {(large) ? <h2>{text}</h2> : <h3>{text}</h3>}
+    <button className={`button ${fill ? 'fill' : 'outline'}`} onClick={onClick}>
+      <h3>{text}</h3>
     </button>
   );
 };

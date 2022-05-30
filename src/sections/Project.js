@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from '../components/Button';
 import ProjectModal from '../components/ProjectModal';
 
-const Project = ({ dark, title, desc, thumbnailImg, projectImg }) => {
+const Project = ({ right, title, desc, thumbnailImg, projectImg }) => {
   const [showProject, setShowProject] = useState(false);
 
   const openProject = () => {
@@ -15,13 +15,13 @@ const Project = ({ dark, title, desc, thumbnailImg, projectImg }) => {
 
   return (
     <>
-      <div className={`project ${dark ? 'dark' : 'bright'}`}>
+      <div className={`project ${right ? 'right' : 'left'}`}>
         <img className='image' src={thumbnailImg} alt={title} />
         <div className='info'>
           <h1>{title}</h1>
           <h2>{desc}</h2>
           <br/><br/>
-          <Button large={false} dark={!dark} text='VIEW PROJECT' onClick={openProject} />
+          <Button fill={false} text='VIEW PROJECT' onClick={openProject} />
         </div>
       </div>
       <ProjectModal show={showProject} close={closeProject} endClose={endCloseProject} title={title} projectImg={projectImg} />
