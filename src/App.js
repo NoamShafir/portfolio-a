@@ -1,21 +1,13 @@
-import { useState } from 'react';
 import Home from './sections/Home';
-import ProjectModal from './components/ProjectModal';
+import Project from './sections/Project';
 
 function App() {
-  const [showProject, setShowProject] = useState(false);
-
-  const openProject = () => {
-    setShowProject(true);
-    document.body.style.overflow = 'hidden';
-  }
-  const closeProject = () => setShowProject(false);
-  const endCloseProject = () => document.body.style.overflow = 'auto';
-  
   return (
     <div>
       <Home />
-      <ProjectModal show={showProject} close={closeProject} endClose={endCloseProject} />
+      <Project dark={false} title='Project 1' desc='Short project description or type' thumbnailImg='http://placekitten.com/600/600' projectImg='http://placekitten.com/720/1200' />
+      <Project dark={true} title='Project 2' desc='Short project description or type' thumbnailImg='http://placekitten.com/700/700' projectImg='http://placekitten.com/720/4000' />
+      <Project dark={false} title='Project 3' desc='Short project description or type' thumbnailImg='http://placekitten.com/800/800' projectImg='http://placekitten.com/720/2000' />
     </div>
   );
 }

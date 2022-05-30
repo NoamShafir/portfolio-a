@@ -1,0 +1,29 @@
+.project {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 80px;
+}
+
+.project.dark {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    flex-direction: row;
+}
+
+.project.bright {
+    background-color: lightgray;
+    color: black;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.project .image {
+    height: 100%;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.6);
+}
+
+.project.dark .info {
+    padding-left: 50px;
+}
