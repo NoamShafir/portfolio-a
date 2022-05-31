@@ -1,7 +1,9 @@
 import './Contact.css';
+import ContactOption from '../components/ContactOption';
 import { ReactComponent as EmailLogo } from '../assets/icons/email.svg';
 import { ReactComponent as PhoneLogo } from '../assets/icons/phone.svg';
 import { ReactComponent as LinkedInLogo } from '../assets/icons/linkedin.svg';
+import BackToTopButton from '../components/BackToTopButton';
 
 const Contact = () => {
   return (
@@ -10,26 +12,12 @@ const Contact = () => {
         <br/>
         <h1>Contact</h1>
         <br/>
-        <div className='option'>
-            <EmailLogo className='logo' fill='white' />
-            <a href='mailto:johndoe@gmail.com' className='address' target="_blank" rel="noopener noreferrer">
-                <h3>johndoe@gmail.com</h3>
-            </a>
-        </div>
+        <ContactOption Logo={EmailLogo} text='johndoe@gmail.com' link='mailto:johndoe@gmail.com' />
         <br/>
-        <div className='option'>
-            <PhoneLogo className='logo' fill='white' />
-            <a href='tel:1234567890' className='address' target="_blank" rel="noopener noreferrer">
-                <h3>123-4567-890</h3>
-            </a>
-        </div>
+        <ContactOption Logo={PhoneLogo} text='123-4567-890' link='tel:1234567890' />
         <br/>
-        <div className='option'>
-            <LinkedInLogo className='logo linkedin' />
-            <a href='https://www.linkedin.com/in/johndoe/' className='address' target="_blank" rel="noopener noreferrer">
-                <h3>linkedin.com/in/johndoe</h3>
-            </a>
-        </div>
+        <ContactOption Logo={LinkedInLogo} text='linkedin.com/in/johndoe' link='https://www.linkedin.com/in/johndoe/' />
+        <BackToTopButton right={true} />
     </div>
   );
 };

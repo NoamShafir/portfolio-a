@@ -10,7 +10,7 @@ const ProjectModal = ({ show, close, endClose, title, projectImg }) => {
         <div className='content'>
           <img className='image' src={projectImg} alt={title} />
         </div>
-        <Close className='close' fill='white' onClick={close} />
+        <Close className='close' onClick={close} />
       </div>
     </CSSTransition>,
     document.getElementById('portal')

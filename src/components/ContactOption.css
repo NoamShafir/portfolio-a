@@ -1,0 +1,20 @@
+.contact-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: color 0.25s;
+}
+
+.contact-option:hover {
+    color: #ab8bf5;
+}
+
+.contact-option .logo {
+    transform: scale(75%);
+}
+
+.contact-option .address {
+    margin-left: 8px;
+}

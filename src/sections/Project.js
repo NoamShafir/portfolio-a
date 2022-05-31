@@ -1,6 +1,7 @@
 import './Project.css';
 import { useState } from 'react';
 import Button from '../components/Button';
+import BackToTopButton from '../components/BackToTopButton';
 import ProjectModal from '../components/ProjectModal';
 
 const Project = ({ right, title, desc, thumbnailImg, projectImg }) => {
@@ -21,8 +22,9 @@ const Project = ({ right, title, desc, thumbnailImg, projectImg }) => {
           <h1>{title}</h1>
           <h2>{desc}</h2>
           <br/><br/>
-          <Button fill={false} text='VIEW PROJECT' onClick={openProject} />
+          <Button type='outlined' text='VIEW PROJECT' onClick={openProject} />
         </div>
+        <BackToTopButton right={!right} />
       </div>
       <ProjectModal show={showProject} close={closeProject} endClose={endCloseProject} title={title} projectImg={projectImg} />
     </>

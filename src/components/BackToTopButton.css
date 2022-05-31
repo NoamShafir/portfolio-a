@@ -1,0 +1,12 @@
+.back-to-top-button {
+    position: absolute;
+    top: 40px;
+}
+
+.back-to-top-button.right {
+    right: 80px;
+}
+
+.back-to-top-button.left {
+    left: 80px;
+}
