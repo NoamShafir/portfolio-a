@@ -17,6 +17,7 @@
 
 .home .intro .third {
   width: calc(100% / 3);
+  font-size: x-large;
 }
 
 .home .intro .third.left {

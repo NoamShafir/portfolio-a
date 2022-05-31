@@ -24,7 +24,11 @@
     color: white;
 }
 
-.contact .option .linkedin-logo {
+.contact .option .logo {
+    transform: scale(75%);
+}
+
+.contact .option .logo.linkedin {
     /*color: #0a66c2;*/
     color: white;
 }
