@@ -4,7 +4,7 @@ import Sun from './Sun';
 
 const swayFactor = 0.04;
 
-const SunContainer = () => {
+const SunContainer = ({ rays }) => {
   const [hover, setHover] = useState(false)
   
   const [magnet, setMagnet] = useState({ x: 0, y: 0 });
@@ -22,7 +22,7 @@ const SunContainer = () => {
     <div ref={containerRef} className='sun-container' onMouseMove={mouseMoveHandler} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <div className='magnet' style={{ transform: hover && `translate(${magnet.x * swayFactor}px, ${magnet.y * swayFactor}px)` }}>
         <div className='float' style={{ animationPlayState: hover ? 'paused' : 'running' }}>
-          <Sun />
+          <Sun rays={rays} />
         </div>
       </div>
     </div>

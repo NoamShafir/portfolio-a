@@ -15,4 +15,9 @@
   border-radius: 200px 200px 0 0;
   transform-origin: 50% 100%;
   pointer-events: auto;
+  cursor: pointer;
+}
+
+.circle-sector .child .image {
+  width: 100%;
 }

@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import BackToTopButton from '../components/BackToTopButton';
 import ProjectModal from '../components/ProjectModal';
 
-const Project = ({ right, title, desc, thumbnailImg, projectImg }) => {
+const Project = ({ id, right, title, desc, thumbnailImg, projectImg }) => {
   const [showProject, setShowProject] = useState(false);
 
   const openProject = () => {
@@ -16,7 +16,7 @@ const Project = ({ right, title, desc, thumbnailImg, projectImg }) => {
 
   return (
     <>
-      <div className={`project ${right ? 'right' : 'left'}`}>
+      <div className={`project ${right ? 'right' : 'left'}`} id={id}>
         <img className='image' src={thumbnailImg} alt={title} />
         <div className='info'>
           <h1>{title}</h1>

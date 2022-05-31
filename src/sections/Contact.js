@@ -7,7 +7,7 @@ import BackToTopButton from '../components/BackToTopButton';
 
 const Contact = () => {
   return (
-    <div className='contact'>
+    <div className='contact' id='contact'>
         <h2>Thanks for visiting my portfolio!</h2>
         <br/>
         <h1>Contact</h1>
